@@ -1,0 +1,7 @@
+## IDF Component Manager Manifest File
+dependencies:
+  TFT_eSPI:
+    git: https://github.com/Bodmer/TFT_eSPI.git
+    version: "8c83eb84bdaa7fb479954e8dad878f9d10e8dca2"
+
+  idf: ">=4.4"
