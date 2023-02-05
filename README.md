@@ -6,6 +6,10 @@ Start by importing the esp-idf environment
 
   cd esp-idf; . ./export.sh; cd ..
 
+Don't forget to install enable ccache - this saves time compiling:
+
+  export IDF_CCACHE_ENABLE=1
+
 Then configure the project using
 
   idf.py menuconfig
