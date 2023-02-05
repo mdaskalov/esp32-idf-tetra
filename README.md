@@ -1,23 +1,34 @@
-# Example how to use TFT_eSPI and arduino in a ESP-IDF project
+# Using TFT_eSPI and Arduino in a ESP-IDF project
 
-This example will help you build your arduino projects using esp-idf build system. It assumes that esp-idf is already installed on your system.
+This example will help you build your arduino projects using esp-idf build system. 
+
+It assumes that esp-idf is already installed and on your system. Refer to [this](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html) article.
 
 Start by importing the esp-idf environment
 
-  cd esp-idf; . ./export.sh; cd ..
+```bash
+cd esp-idf; . ./export.sh; cd ..
+```
 
-Don't forget to install enable ccache - this saves time compiling:
+Don't forget to install and enable ccache - this saves time compiling:
 
-  export IDF_CCACHE_ENABLE=1
+```bash
+export IDF_CCACHE_ENABLE=1
+```
 
 Then configure the project using
 
-  idf.py menuconfig
+```bash
+idf.py menuconfig
+```
 
-In "Arduino Configuration" select "Autostart Arduino setup and loop on boot" to be arduino compatible
+In "Arduino Configuration" select "Autostart Arduino setup and loop on boot" to be fully Arduino compatible.
 
 In "ComponentConfig --> TFT_eSPI" configure the pins of your display (I've tested with TTGO T-Display ST7789V)
 
-Then build, flash and start monitoring with (exit terminal with Ctrl-T Ctrl-X):
+Then build, flash and start monitoring with:
 
-  idf.py flash monitor
+```bash
+idf.py flash monitor
+```
+In montiotor press `Ctrl-T` `Ctrl-X` to exit.
